@@ -1,0 +1,13 @@
+# Ignore bundler config.
+/.bundle
+
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+/test/*
+
+/sass_and_grid/*
+/.sass-cache/*
+
+/node_modules
+.idea

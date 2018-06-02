@@ -1,0 +1,96 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+@import "button"
+
+.grid
+  display: grid
+
+.main-header
+  /* in screen */
+  min-height: 100vh
+  /* center */
+  background-size: cover
+  background-position: center
+  /* for &before */
+  position: relative
+  align-content: center
+  /* color image */
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $dark
+    opacity: .92
+
+.header-content
+  z-index: 1
+  color: white
+  text-align: center
+  /* read */
+  padding: 60px $gutter
+  h1
+    font-size: 60px
+    font-family: intro-grid, sans-serif
+    font-weight: normal
+    line-height: 1.5
+  /* buttons (gray) */
+  .button
+    margin: 10px
+  .button-gray
+    background-color: $gray
+    &:after
+      background-color: darken($gray, 15%)
+    &:hover
+      background-color: lighten($gray, 5%)
+    &:active
+      background-color: darken($gray, 5%)
+
+
+.portfolio-section
+  padding: 10px
+  grid-template-columns: repeat(4, 1fr)
+  /* padding on grid */
+  grid-gap: 10px
+
+  &:nth-child(1)
+    grid-column: 1/3
+
+
+.portfolio-item
+  min-height: 32vh
+  /* center */
+  background-size: cover
+  background-position: center
+  /* for &before */
+  position: relative
+  /* cursor */
+  transition: color .5s ease
+  cursor: pointer
+  &:before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $dark
+    opacity: .60
+  .portfolio-content
+    z-index: 1
+    padding: $gutter
+    text-align: center
+    align-content: center
+    font-size: 20px
+    font-weight: bold
+    color: white
+    &:hover
+      color: $accent
+
+
+
+@import "media"
